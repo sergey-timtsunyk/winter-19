@@ -1,7 +1,0 @@
-
-
-
-
-
-docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d nginx
-docker run --name my-nginx -v nginx
