@@ -1,0 +1,16 @@
+{
+    "name": "tymtsunyk/lesson-7",
+    "description": "Test description",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Serhii Tymtsunyk",
+            "email": "serhii.tymtsunyk@corp.mailfire.io"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "psr/cache": "^1.0@dev",
+        "phpmailer/phpmailer": "6.0.7"
+    }
+}
