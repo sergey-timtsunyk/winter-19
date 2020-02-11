@@ -59,7 +59,7 @@ services:
       - ./servises_config/data:/var/lib/mysql
       - ./servises_config/mysql/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
     ports:
-      - "3307:3306"
+      - "3309:3306"
     networks:
       custom_network:
         aliases:
