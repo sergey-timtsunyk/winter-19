@@ -1,0 +1,17 @@
+{
+    "name": "tymtsunyk/lesson-10",
+    "authors": [
+        {
+            "name": "Serhii Tymtsunyk",
+            "email": "serhii.tymtsunyk@corp.mailfire.io"
+        }
+    ],
+    "require": {
+        "psr/cache": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    }
+}
