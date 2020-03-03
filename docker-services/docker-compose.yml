@@ -55,6 +55,8 @@ services:
       - MYSQL_DATABASE=app
       - MYSQL_USER=app_user
       - MYSQL_PASSWORD=123
+    command:
+      default_authentication_plugin=mysql_native_password
     volumes:
       - ./servises_config/data:/var/lib/mysql
       - ./servises_config/mysql/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
@@ -64,6 +66,26 @@ services:
       custom_network:
         aliases:
           - mysql
+
+
+  mysql5.7:
+    image: mysql:5.7
+    container_name: app-mysql5.7
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=123
+      - MYSQL_DATABASE=app
+      - MYSQL_USER=app_user
+      - MYSQL_PASSWORD=123
+    volumes:
+      - ./servises_config/data5.7:/var/lib/mysql
+      - ./servises_config/mysql/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
+    ports:
+      - "3313:3306"
+    networks:
+      custom_network:
+        aliases:
+          - mysql5.7
 
   php-fpm:
     build:
