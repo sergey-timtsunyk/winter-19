@@ -8,10 +8,10 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 $mappingAction = [
     'GET' => [
-        '/tags' => [\Wiki\Catalog\Controller\Tags::class, 'getList']
+        '/tags' => [\Wiki\Catalog\Controllers\Tags::class, 'getList']
     ],
     'POST' => [
-        '/tags/create' => [\Wiki\Catalog\Controller\Tags::class, 'create']
+        '/tags/create' => [\Wiki\Catalog\Controllers\Tags::class, 'create']
     ]
 ];
 

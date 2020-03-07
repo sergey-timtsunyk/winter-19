@@ -1,6 +1,6 @@
 <?php
 
-namespace Wiki\Catalog\Controller;
+namespace Wiki\Catalog\Controllers;
 
 class Articles
 {
