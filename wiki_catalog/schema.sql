@@ -58,3 +58,16 @@ create table tags_articles
         foreign key (tag_id) references tags (id)
             on delete cascade
 );
+
+create table `references`
+(
+    id int auto_increment,
+    article_id smallint not null,
+    link varchar(255) null,
+    content varchar(255) not null,
+    constraint references_pk
+        primary key (id),
+    constraint references_articles_id_fk
+        foreign key (article_id) references articles (id)
+            on delete cascade
+);

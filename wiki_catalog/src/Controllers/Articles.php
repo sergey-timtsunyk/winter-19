@@ -2,6 +2,8 @@
 
 namespace Wiki\Catalog\Controllers;
 
+use Wiki\Catalog\Data\Repository\ArticleRepository;
+
 class Articles
 {
     public function create()
@@ -24,9 +26,12 @@ class Articles
 
     }
 
-    public function show()
+    public function showItem()
     {
+        $articleRepository = new ArticleRepository();
+        $article = $articleRepository->getItem(1);
 
+        var_dump($article);
     }
 
     public function showList()
